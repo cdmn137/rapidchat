@@ -9,7 +9,7 @@ from flask_socketio import SocketIO, send, emit, join_room
 from flask_wtf.csrf import CSRFProtect
 
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder = 'templates')
 csrf = CSRFProtect(app)
 app.config['SECRET_KEY'] = 'clave_secreta'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///chat.db'
